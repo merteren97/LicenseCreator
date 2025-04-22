@@ -24,7 +24,6 @@ namespace LicenseCreator
             }
 
             string encrypted = Encrypt(guid, gizliSifre);
-            Console.WriteLine($"Encrypted: {encrypted}");
             txtEncryptedOutput.Text = encrypted;
         }
         private void btnCopy_Click(object sender, EventArgs e)
@@ -50,7 +49,6 @@ namespace LicenseCreator
         private string Encrypt(string plainText, string key)
         {
             byte[] keyBytes = GetFixedSizeKey(key);
-            Console.WriteLine($"Key: {Convert.ToBase64String(keyBytes)}");
             byte[] iv = Encoding.UTF8.GetBytes("1234567890abcdef");
 
             using Aes aes = Aes.Create();
