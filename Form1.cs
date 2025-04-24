@@ -22,8 +22,8 @@ namespace LicenseCreator
                 MessageBox.Show("Lütfen bir GUID girin.");
                 return;
             }
-
-            string encrypted = Encrypt(guid, gizliSifre);
+            string expiryDate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            string encrypted = Encrypt($"{guid}|{expiryDate}", gizliSifre);
             txtEncryptedOutput.Text = encrypted;
         }
         private void btnCopy_Click(object sender, EventArgs e)

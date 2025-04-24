@@ -36,6 +36,9 @@
             btnEncrypt = new Button();
             btnCopy = new Button();
             btnGetGuid = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            groupBox1 = new GroupBox();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -52,7 +55,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Courier New", 12F);
-            label2.Location = new Point(12, 90);
+            label2.Location = new Point(12, 99);
             label2.Name = "label2";
             label2.Size = new Size(88, 18);
             label2.TabIndex = 1;
@@ -67,7 +70,7 @@
             // 
             // txtEncryptedOutput
             // 
-            txtEncryptedOutput.Location = new Point(106, 89);
+            txtEncryptedOutput.Location = new Point(106, 98);
             txtEncryptedOutput.Name = "txtEncryptedOutput";
             txtEncryptedOutput.Size = new Size(297, 23);
             txtEncryptedOutput.TabIndex = 3;
@@ -76,7 +79,7 @@
             // 
             btnEncrypt.Location = new Point(355, 37);
             btnEncrypt.Name = "btnEncrypt";
-            btnEncrypt.Size = new Size(101, 46);
+            btnEncrypt.Size = new Size(101, 55);
             btnEncrypt.TabIndex = 4;
             btnEncrypt.Text = "Encrypt";
             btnEncrypt.UseVisualStyleBackColor = true;
@@ -84,7 +87,7 @@
             // 
             // btnCopy
             // 
-            btnCopy.Location = new Point(409, 89);
+            btnCopy.Location = new Point(409, 98);
             btnCopy.Name = "btnCopy";
             btnCopy.Size = new Size(47, 23);
             btnCopy.TabIndex = 5;
@@ -96,17 +99,35 @@
             // 
             btnGetGuid.Location = new Point(248, 37);
             btnGetGuid.Name = "btnGetGuid";
-            btnGetGuid.Size = new Size(101, 46);
+            btnGetGuid.Size = new Size(101, 55);
             btnGetGuid.TabIndex = 6;
             btnGetGuid.Text = "Get GUID";
             btnGetGuid.UseVisualStyleBackColor = true;
             btnGetGuid.Click += btnGetGuid_Click;
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(6, 22);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 7;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(dateTimePicker1);
+            groupBox1.Location = new Point(12, 37);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(215, 55);
+            groupBox1.TabIndex = 8;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "License Time";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(468, 127);
+            ClientSize = new Size(468, 135);
+            Controls.Add(groupBox1);
             Controls.Add(btnGetGuid);
             Controls.Add(btnCopy);
             Controls.Add(btnEncrypt);
@@ -120,6 +141,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "License Creator";
+            groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -133,5 +155,7 @@
         private Button btnEncrypt;
         private Button btnCopy;
         private Button btnGetGuid;
+        private DateTimePicker dateTimePicker1;
+        private GroupBox groupBox1;
     }
 }
